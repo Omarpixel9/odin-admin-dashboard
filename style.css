@@ -11,7 +11,7 @@ body {
 #content {
   display: grid;
   grid-template-columns: minmax(150px, 1fr) 5fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 2fr 4fr;
   height: 100%;
 }
 
@@ -22,6 +22,7 @@ body {
   padding: 20px;
   font-size: 1.2rem;
   font-weight: 500;
+  z-index: 2;
   /* display: flex;
   flex-direction: column; */
 }
@@ -44,9 +45,33 @@ body {
 }
 
 #content > header {
-  background-color: red;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: white;
+  z-index: 1;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  padding: 30px 30px 0 30px;
+}
+#content > header > .bottom-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+#content > header ul {
+  display: flex;
+  gap: 15px;
+}
+#content > header button {
+  background-color: var(--sidebar-bg);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  /* padding: 15px 0px; */
+  height: 45px;
+  flex: 1;
+  font-weight: bold;
 }
 #content > main {
   grid-column: 2 / -1;
-  background-color: darkgray;
+  background-color: #e4e5e6;
 }
