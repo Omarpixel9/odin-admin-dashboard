@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+  --sidebar-bg: #20a39e;
+}
 body {
   font-family: 'Roboto';
   height: 100vh;
@@ -11,16 +14,36 @@ body {
   grid-template-rows: 1fr 4fr;
   height: 100%;
 }
-#content > *::before {
-  content: 'chicken';
-}
 
 #content > aside {
   grid-row: 1 / -1;
-  background-color: lightblue;
+  background-color: var(--sidebar-bg);
+  color: white;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  /* display: flex;
+  flex-direction: column; */
 }
+#content > aside > h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+#content > aside > h1::before {
+  /* content: ''; */
+}
+#content > aside > nav {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+#content > aside > nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 #content > header {
-  grid-column: 2 / -1;
   background-color: red;
 }
 #content > main {
