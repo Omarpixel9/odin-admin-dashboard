@@ -142,4 +142,18 @@ body {
 #content > main {
   grid-column: 2 / -1;
   background-color: var(--main-bg);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 15px;
+}
+main > #projects {
+  grid-row: 1 / -1;
+}
+main > #projects > h1 {
+  /* font-size: 1.5 */
+}
+main > #announcements {
+}
+main > #trending {
 }
