@@ -244,9 +244,12 @@ main > #trending ul > li {
 main > #trending ul > li > div {
   flex: 1;
   justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 main > #trending img {
-  width: 54px;
+  width: 64px;
   height: 64px;
   border-radius: 50%;
 }
