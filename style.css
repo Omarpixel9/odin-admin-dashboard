@@ -178,5 +178,25 @@ main > #announcements > ul div {
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   padding: 30px 0;
 }
-main > #trending {
+main > #trending ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main > #trending ul > li h3 {
+  font-weight: 500;
+}
+main > #trending ul > li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main > #trending ul > li > div {
+  flex: 1;
+  justify-self: center;
+}
+main > #trending img {
+  width: 54px;
+  height: 64px;
+  border-radius: 50%;
 }
