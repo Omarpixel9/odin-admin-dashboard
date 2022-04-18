@@ -166,13 +166,55 @@ main p {
 main > #projects {
   grid-row: 1 / -1;
 }
-
-main > #announcements {
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(250px, 1fr);
+  gap: 30px;
 }
-main ul {
+.projects-container > div {
+  border-left: 8px solid orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.projects-container .buttons-container {
+  align-self: flex-end;
+}
+.buttons-container {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons-container button {
+  border: none;
+  background-color: inherit;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.buttons-container button:hover {
+  background-color: rgb(210, 210, 210);
+  outline: 5px solid rgb(210, 210, 210);
+}
+.buttons-container button:nth-child(1) {
+  background-image: url(assets/star.svg);
+}
+.buttons-container button:nth-child(2) {
+  background-image: url(assets/eye.svg);
+}
+.buttons-container button:nth-child(3) {
+  background-image: url(assets/share.svg);
+}
+main ul,
+.projects-container > div {
   background-color: white;
   padding: 30px;
   border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.132);
 }
 main > #announcements > ul div {
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
@@ -207,6 +249,9 @@ main > #trending img {
     gap: 15px;
   }
   .top-section {
+    grid-template-columns: 1fr;
+  }
+  .projects-container {
     grid-template-columns: 1fr;
   }
 }
